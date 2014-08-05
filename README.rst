@@ -87,15 +87,18 @@ To get yourself started:
 Contributions are always more than welcome. If you see something missing, add it
 in and send me a pull request.
 
-*WARNING*: Ubuntu 12.04 (and some other distros) include ``libxslt`` version
-1.1.26, which changes the now-empty ``<head>`` tag to ``<head/>`` - which 
+**NOTE**: Ubuntu 12.04 (and some other distros) include ``libxslt`` version
+``1.1.26``, which changes the now-empty ``<head>`` tag to ``<head/>`` - which 
 isn't valid HTML 5. To see which version of ``libxslt`` was used to build
-your ``libxml``, look at the output for ``make init`` and look for the 
+your ``libxml``, examine the output of ``make init`` and look for the 
 line that looks like ``Using build configuration of libxslt 1.1.XX``; if
 that says ``26``, some test failures are expected (at which point, you
-can rely on TravisCI to run your tests for you). You could also install
-your own version of ``libxslt`` from source, but you're probably going to have
-a bad time.
+can rely on `TravisCI`_ to run your tests for you). 
+
+You could also install your own version of ``libxslt`` from source, but 
+you're probably going to have a bad time.
+
+.. _`TravisCI`: https://travis-ci.org/dlanger/inlinestyler
 
 License
 =======

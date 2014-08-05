@@ -5,7 +5,7 @@ python:
   - "2.7"
 
 install: 
-  - wget http://xmlsoft.org/sources/libxslt-1.1.28.tar.gz; tar xvf libxslt-1.1.28.tar.gz; pushd libxslt-1.1.28; ./configure && make && sudo make install; popd; 
+  - wget http://xmlsoft.org/sources/libxslt-1.1.28.tar.gz; tar xvf libxslt-1.1.28.tar.gz; cd libxslt-1.1.28\python; CFLAGS="-O0" python setup.py build; python setup.py install
   - pip install pytest cssutils
 
 script:  make test
