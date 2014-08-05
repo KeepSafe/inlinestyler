@@ -1,8 +1,11 @@
 language: python
+
 python:
   - "3.3"
   - "2.7"
+
 install: 
-  - pip install .
-  - pip install pytest
+  - wget http://xmlsoft.org/sources/libxslt-1.1.28.tar.gz; tar xvf libxslt-1.1.28.tar.gz; pushd libxslt-1.1.28; ./configure && make && sudo make install; popd; 
+  - pip install pytest cssutils
+
 script:  make test
