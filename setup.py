@@ -27,6 +27,7 @@ setup(
         'Topic :: Text Processing :: Markup :: HTML',
         ],
     install_requires=[
-	'cssutils', 'lxml'
+        'cssutils', 
+        'lxml'
 	]
 )
