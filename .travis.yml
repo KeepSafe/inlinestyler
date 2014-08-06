@@ -6,6 +6,6 @@ python:
 
 install: 
   - wget http://xmlsoft.org/sources/libxslt-1.1.28.tar.gz; tar xf libxslt-1.1.28.tar.gz; pushd libxslt-1.1.28; CFLAGS="-O0" ./configure && make && sudo make install; popd
-  - pip install pytest cssutils
+  - pip install pytest libxml cssutils
 
 script:  make test
